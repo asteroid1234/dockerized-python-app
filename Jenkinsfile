@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = "taras.shpetko@gmail.com/dockerized-python-app"
+        DOCKER_IMAGE = "tash19/dockerized-python-app"
     }
     stages {
         stage('Clone Repository') {

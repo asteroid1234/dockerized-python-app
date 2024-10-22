@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/asteroid1234/dockerized-python-app.git'
+                git branch: 'main', git 'https://github.com/asteroid1234/dockerized-python-app.git'
             }
         }
         stage('Build Docker Image') {

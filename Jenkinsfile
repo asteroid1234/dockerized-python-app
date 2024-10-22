@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = "tash19/dockerized-python-app"
+        DOCKER_IMAGE = "taras.shpetko@gmail.com/dockerized-python-app"
     }
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', git 'https://github.com/asteroid1234/dockerized-python-app.git'
+                git branch: 'main', url: 'https://github.com/asteroid1234/dockerized-python-app.git'
             }
         }
         stage('Build Docker Image') {

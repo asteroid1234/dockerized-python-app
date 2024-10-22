@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV FLASK_APP=rest_app.py
 
 # Run the application
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=13.59.112.189"]

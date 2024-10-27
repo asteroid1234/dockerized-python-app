@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpassword
+    ports:
+      - "3306:3306"
+  rest_app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_USER=testuser
+      - DATABASE_PASSWORD=testpassword
+      - DATABASE_NAME=testdb
+    depends_on:
+      - db
+
